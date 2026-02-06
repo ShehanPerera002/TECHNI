@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/app_header.dart';
 import '../widgets/primary_button.dart';
 
+// Testing auto-sync functionality - Real test
 class SelectCategoryScreen extends StatefulWidget {
   const SelectCategoryScreen({super.key});
 
@@ -125,9 +126,12 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
               PrimaryButton(
                 text: "Save Profile",
                 onPressed: () {
+                  
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text("Profile saved (UI only). Connect backend later.")),
+                    
                   );
+                  Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
                 },
               ),
             ],

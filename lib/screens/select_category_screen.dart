@@ -19,6 +19,7 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
     "Carpenter",
     "Painter",
     "AC Tech",
+    "Mobile Tech",
   ];
 
   Widget categoryTile(String name) {
